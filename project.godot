@@ -23,11 +23,23 @@ _global_script_classes=[ {
 "class": "PlayerMove",
 "language": "GDScript",
 "path": "res://game/script/playerMove.gd"
+}, {
+"base": "Object",
+"class": "RobotMove",
+"language": "GDScript",
+"path": "res://game/script/robotMove.gd"
+}, {
+"base": "Object",
+"class": "robotMove",
+"language": "GDScript",
+"path": "res://game/script/robot.gd"
 } ]
 _global_script_class_icons={
 "Map": "",
 "MapCreation": "",
-"PlayerMove": ""
+"PlayerMove": "",
+"RobotMove": "",
+"robotMove": ""
 }
 
 [application]
