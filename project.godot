@@ -10,17 +10,24 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Object",
+"class": "Map",
+"language": "GDScript",
+"path": "res://game/map.gd"
+}, { 
+"base": "Object",
 "class": "MapCreation",
 "language": "GDScript",
 "path": "res://editor/script/map_creation.gd"
 } ]
 _global_script_class_icons={
+"Map": ""
 "MapCreation": ""
 }
 
 [application]
 
 config/name="Captain Sonar AI"
+run/main_scene="res://test.tscn"
 config/icon="res://icon.png"
 
 [autoload]
