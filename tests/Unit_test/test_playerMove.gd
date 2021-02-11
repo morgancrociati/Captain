@@ -1,6 +1,6 @@
 extends "res://addons/gut/test.gd"
 
-var playerMove = preload("res://game/playerMove.gd")
+var playerMove = preload("res://game/script/playerMove.gd")
 
 func test_add_movement():
 	var playerM = playerMove.new()
