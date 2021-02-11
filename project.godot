@@ -46,6 +46,10 @@ config/icon="res://icon.png"
 
 Globals="*res://shared/Globals.gd"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "gut" )
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
