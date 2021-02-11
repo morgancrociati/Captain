@@ -1,12 +1,14 @@
 extends Object
 
-class_name playerMove
+class_name PlayerMove
 
 # store the cumulative movement
-var movement
+var movement :  Array
+var possibilities : Array = []
 
-func init_movement():
+func _init(map : Map):
 	movement = [Vector2(0,0)]
+	possibilities = map.init_possibilities()
 
 func add_movement(d : Vector2):
 	if d != Globals.NORTH and d != Globals.EAST and d != Globals.SOUTH and d != Globals.WEST :

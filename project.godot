@@ -20,14 +20,14 @@ _global_script_classes=[ {
 "path": "res://editor/script/map_creation.gd"
 }, {
 "base": "Object",
-"class": "playerMove",
+"class": "PlayerMove",
 "language": "GDScript",
 "path": "res://game/script/playerMove.gd"
 } ]
 _global_script_class_icons={
 "Map": "",
 "MapCreation": "",
-"playerMove": ""
+"PlayerMove": ""
 }
 
 [application]
