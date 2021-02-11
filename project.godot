@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Object",
-"class": "Map",
+"class": "playerMove",
 "language": "GDScript",
-"path": "res://globals/script/map.gd"
+"path": "res://playerMove.gd"
 } ]
 _global_script_class_icons={
-"Map": ""
+"playerMove": ""
 }
 
 [application]
