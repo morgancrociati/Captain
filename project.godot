@@ -27,12 +27,16 @@ _global_script_class_icons={
 [application]
 
 config/name="Captain Sonar AI"
-run/main_scene="res://main_menu/scene/mainMenu.tscn"
+run/main_scene="res://test.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Globals="*res://shared/Globals.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "gut" )
 
 [rendering]
 
