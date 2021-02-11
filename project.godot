@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="Captain Sonar AI"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://shared/Globals.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
