@@ -10,24 +10,30 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Object",
-"class": "playerMove",
-"language": "GDScript",
-"path": "res://Game/playerMove.gd"
-}, {
-"base": "Object",
 "class": "Map",
 "language": "GDScript",
-"path": "res://game/map.gd"
-}, { 
+"path": "res://Game/map.gd"
+}, {
 "base": "Object",
 "class": "MapCreation",
 "language": "GDScript",
 "path": "res://editor/script/map_creation.gd"
+}, {
+"base": "Object",
+"class": "playerMove",
+"language": "GDScript",
+"path": "res://Game/playerMove.gd"
+}, {
+"base": "Node",
+"class": "playerMoveTest",
+"language": "GDScript",
+"path": "res://godot_test/test.gd"
 } ]
 _global_script_class_icons={
-"playerMove": "",
 "Map": "",
-"MapCreation": ""
+"MapCreation": "",
+"playerMove": "",
+"playerMoveTest": ""
 }
 
 [application]
