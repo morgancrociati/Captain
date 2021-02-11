@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Object",
 "class": "Map",
 "language": "GDScript",
-"path": "res://Game/map.gd"
+"path": "res://game/map.gd"
 }, {
 "base": "Node",
 "class": "playerMoveTest",
 "language": "GDScript",
-"path": "res://test.gd"
+"path": "res://godot_test/test.gd"
 } ]
 _global_script_class_icons={
 "Map": "",
