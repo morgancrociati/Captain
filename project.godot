@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Object",
-"class": "Map",
+"class": "MapCreation",
 "language": "GDScript",
-"path": "res://globals/script/map.gd"
+"path": "res://editor/script/map_creation.gd"
 } ]
 _global_script_class_icons={
-"Map": ""
+"MapCreation": ""
 }
 
 [application]
