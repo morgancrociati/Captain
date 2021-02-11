@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Object",
 "class": "Map",
 "language": "GDScript",
-"path": "res://Game/map.gd"
+"path": "res://game/map.gd"
 }, {
 "base": "Object",
 "class": "MapCreation",
@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Object",
 "class": "playerMove",
 "language": "GDScript",
-"path": "res://Game/playerMove.gd"
+"path": "res://game/playerMove.gd"
 }, {
 "base": "Node",
 "class": "playerMoveTest",
