@@ -8,20 +8,19 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Object",
-"class": "Map",
-"language": "GDScript",
-"path": "res://globals/script/map.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"Map": ""
+
 }
 
 [application]
 
 config/name="Captain Sonar AI"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://shared/Globals.gd"
 
 [rendering]
 
