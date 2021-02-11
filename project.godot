@@ -13,15 +13,21 @@ _global_script_classes=[ {
 "class": "Map",
 "language": "GDScript",
 "path": "res://game/map.gd"
-}, { 
+}, {
 "base": "Object",
 "class": "MapCreation",
 "language": "GDScript",
 "path": "res://editor/script/map_creation.gd"
+}, {
+"base": "Object",
+"class": "playerMove",
+"language": "GDScript",
+"path": "res://game/playerMove.gd"
 } ]
 _global_script_class_icons={
-"Map": ""
-"MapCreation": ""
+"Map": "",
+"MapCreation": "",
+"playerMove": ""
 }
 
 [application]
@@ -33,6 +39,10 @@ config/icon="res://icon.png"
 [autoload]
 
 Globals="*res://shared/Globals.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "gut" )
 
 [rendering]
 
