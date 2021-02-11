@@ -97,6 +97,9 @@ margin_bottom = 30.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "M"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ScriptProgress" type="ProgressBar" parent="."]
 anchor_top = 1.0
