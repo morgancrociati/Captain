@@ -43,3 +43,4 @@ func test_get_possibilities():
 	pM.possibilities = m.get_possibilities(pM.movement, pM.possibilities)
 	assert_eq(pM.possibilities,[Vector2(0,0)])
 
+

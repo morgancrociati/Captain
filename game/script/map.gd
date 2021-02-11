@@ -8,6 +8,7 @@ var zoneLength: int = -1
 var zoneWidth: int = -1
 var map: Array
 
+
 func load_map(mapName: String) -> bool:
 	var file = File.new()
 	file.open("user://" + mapName + ".map", File.READ)
@@ -47,3 +48,4 @@ func get_possibilities(movement : Array, possibilities : Array) -> Array:
 		else:
 			newPoss.append(p)
 	return newPoss
+
