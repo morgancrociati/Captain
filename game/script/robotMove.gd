@@ -30,6 +30,12 @@ func can_go_north() -> bool:
 	if nextPos.x <0 or nextPos.x >= map.length or nextPos.y < 0 or nextPos.y >= map.width or map.map[nextPos.x][nextPos.y] == Globals.LAND:
 		return false
 	else:
+		var lastPos = movement.back() + Globals.NORTH
+		for m in movement:
+		#if the new position has already been visisted
+			if m == lastPos:
+				#the direction is not valid
+				return false
 		return true
 		
 func can_go_south() -> bool:
@@ -37,6 +43,12 @@ func can_go_south() -> bool:
 	if nextPos.x <0 or nextPos.x >= map.length or nextPos.y < 0 or nextPos.y >= map.width or map.map[nextPos.x][nextPos.y] == Globals.LAND:
 		return false
 	else:
+		var lastPos = movement.back() + Globals.SOUTH
+		for m in movement:
+		#if the new position has already been visisted
+			if m == lastPos:
+				#the direction is not valid
+				return false
 		return true
 		
 func can_go_east() -> bool:
@@ -44,6 +56,12 @@ func can_go_east() -> bool:
 	if nextPos.x <0 or nextPos.x >= map.length or nextPos.y < 0 or nextPos.y >= map.width or map.map[nextPos.x][nextPos.y] == Globals.LAND:
 		return false
 	else:
+		var lastPos = movement.back() + Globals.EAST
+		for m in movement:
+		#if the new position has already been visisted
+			if m == lastPos:
+				#the direction is not valid
+				return false
 		return true
 		
 func can_go_west() -> bool:
@@ -51,13 +69,19 @@ func can_go_west() -> bool:
 	if nextPos.x <0 or nextPos.x >= map.length or nextPos.y < 0 or nextPos.y >= map.width or map.map[nextPos.x][nextPos.y] == Globals.LAND:
 		return false
 	else:
+		var lastPos = movement.back() + Globals.WEST
+		for m in movement:
+		#if the new position has already been visisted
+			if m == lastPos:
+				#the direction is not valid
+				return false
 		return true
 
 func add_movement(d : Vector2):
 	if d != Globals.NORTH and d != Globals.EAST and d != Globals.SOUTH and d != Globals.WEST :
 		return false
 	#add the new direction to the last position
-	var lastPos = movement[movement.size()-1] + d
+	var lastPos = movement.back() + d
 	for m in movement:
 		#if the new position has already been visisted
 		if m == lastPos:
@@ -67,4 +91,43 @@ func add_movement(d : Vector2):
 	movement.append(lastPos)
 	return true
 
-
+func move():
+	var nextDir 
+	var ok = false
+	var test : Array = [true,true,true,true]
+	var verif : Array = [false,false,false,false]
+	rng.randomize()
+	while ok == false and test != verif:
+		nextDir = rng.randi_range(0, 3)
+		match nextDir:
+			0:
+				print(nextDir)
+				if can_go_north() == true:
+					ok = true
+					add_movement(Globals.NORTH)
+				else:
+					test[0] = false
+			1:
+				print(nextDir)
+				if can_go_south() == true:
+					ok = true
+					add_movement(Globals.SOUTH)
+				else:
+					test[1] = false
+			2:
+				print(nextDir)
+				if can_go_east() == true:
+					ok = true
+					add_movement(Globals.EAST)
+				else:
+					test[2] = false
+			3:
+				print(nextDir)
+				if can_go_west() == true:
+					ok = true
+					add_movement(Globals.WEST)
+				else:
+					test[3] = false
+	if test == verif:
+		print("retourn to surface")
+		

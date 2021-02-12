@@ -16,7 +16,6 @@ func test_init_starting_point():
 	var pt 
 	for i in range(20):
 		pt = rM.init_starting_point()
-		print(pt)
 		assert_ne(pt,Vector2(1,1))
 		assert_ne(pt,Vector2(1,2))
 		
@@ -91,3 +90,46 @@ func test_can_go_west():
 	assert_true(rM.can_go_west())
 	rM.starting_pt = Vector2(0,2)
 	assert_false(rM.can_go_west())
+
+	mC.init_map(3, 3, 1, 1)
+	mC.update_map(1, 2, Globals.LAND)
+	mC.save_map("test_map")
+	m.load_map("test_map")
+	rM = robotMove.new(m)
+	rM.starting_pt = Vector2(1,0)
+	assert_true(rM.add_movement(Globals.SOUTH))
+	assert_true(rM.can_go_west())
+	assert_true(rM.add_movement(Globals.EAST))
+	assert_false(rM.can_go_west())
+	assert_true(rM.add_movement(Globals.NORTH))
+	assert_false(rM.can_go_west())
+
+func test_move():
+	var mC = mapCreation.new()
+	var m = map.new()
+	mC.init_map(3, 3, 1, 1)
+	mC.update_map(1, 1, Globals.LAND)
+	mC.update_map(1, 2, Globals.LAND)
+	mC.save_map("test_map")
+	m.load_map("test_map")
+
+	for i in range(20):
+		var rM = robotMove.new(m)
+		rM.starting_pt = Vector2(1,0)
+		rM.move()
+		print("ok")
+
+	mC = mapCreation.new()
+	m = map.new()
+	mC.init_map(3, 3, 1, 1)
+	mC.update_map(1, 1, Globals.LAND)
+	mC.update_map(1, 2, Globals.LAND)
+	mC.update_map(0, 1, Globals.LAND)
+	mC.save_map("test_map")
+	m.load_map("test_map")
+
+	for i in range(20):
+		var rM = robotMove.new(m)
+		rM.starting_pt = Vector2(0,2)
+		rM.move()
+		print("ok")
